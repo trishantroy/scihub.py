@@ -4,7 +4,9 @@ import time
 
 sh = SciHub()
 
-with open("../../paper_dataset.csv") as csvfile:
+base_folder = "../../"
+path_folder = base_folder + "Magazine Papers/"
+with open(base_folder + "paper_dataset.csv") as csvfile:
 	csv_reader = csv.reader(csvfile, delimiter=',')
 	line_count = 0
 	for row in csv_reader:
@@ -13,10 +15,6 @@ with open("../../paper_dataset.csv") as csvfile:
 			url = row[2]
 			print(title)
 			# print(url)
-			# result = sh.download(url, path='../../Magazine Papers/'+title+'.pdf')
+			# result = sh.download(url, path = path_folder + title + '.pdf')
 			time.sleep(2)
 		line_count = line_count + 1
-
-
-# exactly the same thing as fetch except downloads the articles to disk
-# if no path given, a unique name will be used as the file name
