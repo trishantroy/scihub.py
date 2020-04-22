@@ -15,6 +15,6 @@ with open(base_folder + "paper_dataset.csv") as csvfile:
 			url = row[2]
 			print(title)
 			# print(url)
-			# result = sh.download(url, path = path_folder + title + '.pdf')
+			result = sh.download(url, path = path_folder + title + '.pdf')
 			time.sleep(2)
 		line_count = line_count + 1
